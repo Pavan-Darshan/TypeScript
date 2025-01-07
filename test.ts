@@ -213,3 +213,13 @@ function sum(...val : number[]) : number {
 console.log(sum());
 
 console.log(sum(10,25,20));
+
+function adding(a :number, b :number) :number;
+function adding(a :string, b :string) :string;
+
+function adding(a :any,b:any) : any{
+        return a.concat(b);
+}
+
+console.log(adding("abc","def"));
+

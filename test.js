@@ -1,3 +1,4 @@
+"use strict";
 // function getProduct(id){
 //   return {
 //     id: id,
@@ -48,10 +49,10 @@
 //   let b:any;
 //   b=12;
 //   console.log(b)
-var num;
+let num;
 num = 102;
 console.log(num);
-var result; // if not specified any type it  automatically assign as any 
+let result; // if not specified any type it  automatically assign as any 
 result = 101;
 console.log(result);
 result = [1, 4, 5, 8];
@@ -66,7 +67,7 @@ function my(abc) {
 console.log(my(10));
 // void type do not return any value
 // only assign undefined to the variable
-var m;
+let m;
 m = undefined;
 function add(a, b) {
     if (typeof a == "string" && typeof b == "string")
@@ -76,31 +77,31 @@ function add(a, b) {
     throw new Error("Parameter must be string or number");
 }
 console.log(add("pavan", " darshan"));
-var un;
+let un;
 un = 101;
 un = [2, 4, 7, 9];
 console.log(typeof un);
 console.log(un.length); // asseration or narrowing type
 // string literal type----------------------------
-var click;
+let click;
 click = 'press';
 console.log(click);
-var mouse;
+let mouse;
 mouse = 'dblclick';
 mouse = 'click';
-var anothermouse;
+let anothermouse;
 anothermouse = 'click';
 anothermouse = 'mouseup';
 console.log(anothermouse);
-var candidate = {
+let candidate = {
     name: "pavan",
     age: 29,
     email: "@gmail.com",
     mob: 96969696
 };
 console.log(candidate);
-var nev;
-var count = 10, max = 100;
+let nev;
+let count = 10, max = 100;
 max > count ? console.log("count is lesser") : console.log("count is bigger");
 //  let i = 0;
 //  for (; i < 10; i++) {
@@ -108,20 +109,16 @@ max > count ? console.log("count is lesser") : console.log("count is bigger");
 //         continue;
 //     console.log(i); 
 //  }
-var myFun = function (a, b) {
+let myFun = function (a, b) {
     if (typeof b !== 'undefined')
         return a + b;
     return a;
 };
 console.log(myFun(50, 45));
 // rest parameter
-function sum() {
-    var val = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        val[_i] = arguments[_i];
-    }
-    var total = 0;
-    val.forEach(function (x) { return total += x; });
+function sum(...val) {
+    let total = 0;
+    val.forEach((x) => total += x);
     return total;
 }
 console.log(sum());
